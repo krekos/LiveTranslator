@@ -16,9 +16,10 @@ use Nette;
  * @property string $presenterLanguageParam
  * @property-read bool $currentLangDefault
  */
-class Translator extends Nette\Object implements Nette\Localization\ITranslator
+class Translator implements Nette\Localization\ITranslator
 {
-
+	use Nette\SmartObject;
+	
 	/** @var string plural-form meta */
 	public static $defaultPluralForms = 'nplurals=1; plural=0;';
 
